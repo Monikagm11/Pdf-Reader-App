@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class PDFScreen extends StatefulWidget {
@@ -31,6 +32,7 @@ class _PDFScreenState extends State<PDFScreen> {
     controller = PdfViewerController();
     controller.annotationSettings.highlight.color =
         highlight_color[color_index];
+    FlutterWindowManager.addFlags(FlutterWindowManager.FLAG_SECURE);
 
     super.initState();
   }
